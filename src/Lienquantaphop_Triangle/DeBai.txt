@@ -1,0 +1,18 @@
+Liên quan theo Kiểu tập hợp
+
+Point
+- x: int
+- y: int
++ Point(x: int, y: int)
++ setX(x: int): void
++ getX(): int
++ setY(y: int): void
++ getY(): int
+
+Triangle
+- vertice1: Point
+- vertice2: Point
+- vertice3: Point
++ Triangle(vertice1: Point, vertice2: Point, vertice3: Point)
++ Triangle(x1:int, y1:int, x2:int, y2:int, x3:int, y3:int)
++ getPerimeter(): double

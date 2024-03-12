@@ -8,7 +8,7 @@ public class Main {
         String name = scanner.nextLine();
         System.out.print("Lương theo giờ: ");
         int paymentPerHour = scanner.nextInt();
-        System.out.print("Loại nhân viên (1. Part-time | 2. Full-time): ");
+        System.out.print("Loại nhân viên (1. Parttime | 2. Fulltime): ");
         int employeeType = scanner.nextInt();
 
         System.out.println("---Thông tin nhân viên---");

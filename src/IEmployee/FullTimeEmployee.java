@@ -5,6 +5,6 @@ public class FullTimeEmployee extends Employee implements IEmployee {
     }
     @Override
     public int calculateSalary() {
-        return paymentPerHour * 20;
+        return paymentPerHour * 18;
     }
 }
