@@ -7,6 +7,7 @@ public abstract class Shape {
 
     public Shape() {
         this("white", false);
+
     }
 
     public Shape(String color, boolean filled) {
