@@ -1,0 +1,58 @@
+*Schcol
+ -name:String
+ -address:String
+ -phone_number: String
+
+ +add_student(student : Student): voice
+ +remove_student(student: Student): void
+ +add_department(dept:Department):void
+ +remove_department(clept:Department): void
+
+
+* Department
+-name:String
++add_instructor (instructor:Instructor) :void
++remove_instructor(instructor:Instructor): void
+
+
+
+*Student
+-name:String
+-student_ID:String
++enrol(c:Course):void
++drop_courses(c:Course):void
++tranfer_credits(c1: Course ,c2:Course); void
+
+*Course
+-name:String
+-course ID:String
+
+*Instructor
+-name: string
+
+Viết them hàm Main.java nữa
+  các bảng ở trên có mối quan he nhu sau
+  Mối quan hệ liên kết:
+
+  Giữa School và Department: Mối quan hệ *1.. từ School đến Department cho biết một trường có thể có nhiều khoa. Mối quan hệ này được gọi là liên kết một-nhiều.
+  Giữa Department và Instructor: Mối quan hệ *1.. từ Department đến Instructor cho biết một khoa có thể có nhiều giảng viên. Mối quan hệ này cũng là liên kết một-nhiều.
+  Giữa Student và Course: Mối quan hệ **.. từ Student đến Course cho biết một sinh viên có thể đăng ký nhiều khóa học. Mối quan hệ này là liên kết nhiều-nhiều.
+  Giữa Course và Instructor: Mối quan hệ **.. từ Course đến Instructor cho biết một khóa học có thể được giảng dạy bởi nhiều giảng viên. Mối quan hệ này cũng là liên kết nhiều-nhiều.
+  Mối quan hệ tập hợp:
+  Giữa School và Student: Mối quan hệ *1.. từ School đến Student cho biết một trường có thể có nhiều sinh viên. Mối quan hệ này có thể được xem là mối quan hệ tập hợp, vì một trường có thể được coi là tập hợp các sinh viên.
+  Mối quan hệ phụ thuộc:
+  Giữa Course và Department: Mối quan hệ *1.. từ Course đến Department cho biết một khóa học thuộc về một khoa. Mối quan hệ này có thể được xem là mối quan hệ phụ thuộc, vì một khóa học phụ thuộc vào khoa để tồn tại.
+  Mối quan hệ thực hiện:
+  Giữa Instructor và Course: Mối quan hệ teaches từ Instructor đến Course cho biết giảng viên thực hiện hành động giảng dạy khóa học. Mối quan hệ này có thể được xem là mối quan hệ thực hiện, vì giảng viên thực hiện chức năng giảng dạy khóa học.
+  Mối quan hệ gán:
+  Giữa Student và Course: Mối quan hệ attends từ Student đến Course cho biết sinh viên được gán cho khóa học. Mối quan hệ này có thể được xem là mối quan hệ gán, vì sinh viên được gán cho một hoặc nhiều khóa học.
+
+
+Đề bài chủ yếu tập trung vào thiết kế và triển khai một hệ thống đơn giản đại diện cho quản lý thông tin về một trường học. Mục tiêu là tạo ra các class và phương thức để lưu trữ thông tin về trường học, các phòng ban, giảng viên, sinh viên, và các khóa học. Các yêu cầu cụ thể bao gồm:
+Thông tin cơ bản về trường học: Đề bài yêu cầu lưu trữ thông tin như tên, địa chỉ, và số điện thoại của trường học. Điều này được thực hiện thông qua class School.
+Quản lý các phòng ban (Department): Mỗi phòng ban trong trường học được đại diện bởi class Department, và mỗi phòng ban có thể chứa nhiều giảng viên.
+Quản lý giảng viên (Instructor): Thông tin về giảng viên bao gồm tên. Mỗi giảng viên thuộc một phòng ban (Department), và một phòng ban có thể có nhiều giảng viên.
+Quản lý sinh viên (Student): Thông tin về sinh viên bao gồm tên và mã số sinh viên. Mỗi sinh viên có thể đăng ký cho nhiều khóa học.
+Quản lý khóa học (Course): Mỗi khóa học được đại diện bởi class Course, và mỗi khóa học thuộc về một phòng ban (Department). Mỗi khóa học có thể được giảng dạy bởi nhiều giảng viên.
+Các chức năng quản lý cơ bản: Bao gồm việc thêm/xóa sinh viên, phòng ban, giảng viên, và khóa học vào hệ thống
+Vì vậy, bài toán yêu cầu thiết kế một cấu trúc dữ liệu và mã nguồn để quản lý thông tin của trường học và các thành phần liên quan. Điều này bao gồm việc thiết kế các class và phương thức để thực hiện các chức năng quản lý cơ bản và lưu trữ thông tin đáng tin cậy và có tổ chức.
