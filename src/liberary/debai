@@ -1,0 +1,36 @@
+1.	Book
+•	-Attributes:
+•	bookId (String): Unique identifier for the book.
+•	title (String): Title of the book.
+•	author (String): Author of the book.
+•	isbn (String): International Standard Book Number.
+•	available (boolean): Status to check if the book is available for borrowing.
+•	-Methods:
+•	checkAvailability(): Checks if the book is available for borrowing.
+2.	Member
+•	-Attributes:
+•	memberId (String): Unique identifier for the member.
+•	name (String): Name of the member.
+•	email (String): Email of the member.
+•	booksBorrowed (List<Book>): List of books currently borrowed by the member.
+•	-Methods:
+•	borrowBook(Book book): Adds a book to the member's list of borrowed books.
+•	returnBook(Book book): Removes a book from the member's list of borrowed books.
+3.	Library
+•	-Attributes:
+•	books (List<Book>): Collection of all books in the library.
+•	members (List<Member>): List of all members of the library.
+•	-Methods:
+•	addBook(Book book): Adds a new book to the library.
+•	registerMember(Member member): Adds a new member to the library.
+•	borrowBook(String bookId, String memberId): Processes the borrowing of a book by a member.
+•	returnBook(String bookId, String memberId): Processes the return of a book by a member.
+4.	Borrow
+•	-Attributes:
+•	borrowId (String): Unique identifier for the borrowing record.
+•	book (Book): The book being borrowed.
+•	member (Member): The member who is borrowing the book.
+•	borrowDate (LocalDate): The date when the book was borrowed.
+•	returnDate (LocalDate): The date when the book is supposed to be returned.
+•	-Methods:
+•	isOverdue(): Checks if the book is overdue.
