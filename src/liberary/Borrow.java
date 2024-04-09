@@ -13,7 +13,7 @@ public class Borrow {
         this.book = book;
         this.member = member;
         this.borrowDate = LocalDate.now();
-        this.returnDate = this.borrowDate.plusWeeks(2); // Two weeks borrowing period by default
+        this.returnDate = this.borrowDate.plusWeeks(2);
     }
     public boolean isOverdue() {
         return LocalDate.now().isAfter(returnDate);

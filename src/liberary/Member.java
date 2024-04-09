@@ -19,14 +19,14 @@ public class Member {
     public void borrowBook(Book book) {
         if (book.checkAvailability()) {
             booksBorrowed.add(book);
-            book.available = false; // Mark the book as borrowed
+            book.available = false;
         } else {
             System.out.println("Sach khong co san.");
         }
     }
     public void returnBook(Book book) {
         booksBorrowed.remove(book);
-        book.available = true; // Mark the book as available again
+        book.available = true;
     }
     public String getMemberId() {
         return memberId;

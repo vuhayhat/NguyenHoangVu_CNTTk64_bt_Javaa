@@ -11,7 +11,7 @@ public class Book {
         this.title = title;
         this.author = author;
         this.isbn = isbn;
-        this.available = true; // By default, new books are available
+        this.available = true;
     }
     public boolean checkAvailability() {
         return available;
